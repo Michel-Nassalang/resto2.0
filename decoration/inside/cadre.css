@@ -1,0 +1,200 @@
+*{
+    z-index: 100;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    transition: 0.6s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background:rgba(44, 43, 43, 0.712);
+    margin-bottom: 20px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    z-index: 10000;
+}
+header.sticky{
+    height: auto;
+    margin-bottom: 25px;
+    background: rgba(20, 20, 20, 0.712);
+}
+.logo{
+    font-family: 'Forte';
+    letter-spacing: 2px;
+    width: fit-content;
+    font-size: 45px;
+    margin-top: -8px;
+    margin-left: 5%;
+    z-index: 10000;
+    color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1.5s;
+}
+.logo:nth-child(1){
+    animation-delay: 1.5s;
+}
+.logo:nth-child(2){
+    animation-delay: 2.5s;
+}
+.logo:nth-child(3){
+    animation-delay: 3.5s;
+}
+
+.logo span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 3px;
+    background-color: rgb(243, 182, 13);
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1.5s;
+    }
+    #slider h1:nth-child(1) span{
+        animation-delay: 0.5s;
+    }
+    #slider h1:nth-child(2) span{
+        animation-delay: 1.5s;
+    }
+    #slider h1:nth-child(3) span{
+        animation-delay: 2.5s;
+    }
+    @keyframes text_reveal_box{
+        50%{
+            width: 100%;
+            left: 0;
+        }
+        100%{
+            width: 0;
+            left: 100%;
+        }
+    }
+    @keyframes text_reveal{
+        100%{
+            color: rgb(243, 182, 13);
+        }
+    }
+nav{
+    margin-top: 0.5vh;
+    margin-right: 20px;
+    z-index: 10000;
+}
+nav ul li{
+    display: inline-block;
+    /* instabilité */
+    margin: -3px 1px;
+    /* instabilité */
+    padding: 3px 15px;
+    background-color: none;
+    border-radius: 2px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.8s;
+}
+nav ul li::after{
+    content:'';
+    height: 3px;
+    width:0;
+    background:rgb(243, 182, 13);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+nav ul li:hover::after{
+    width:100%;
+}
+nav ul li a{
+    font-size: 16px;
+    color: rgb(243, 182, 13);
+    font-family: cursive;
+    text-decoration: none;
+    transition: 0.8s;
+}
+header.sticky nav ul li a{
+    font-size: 16px;
+    color:rgb(0, 0, 0);
+}
+header.sticky nav ul li{
+    background-color: rgb(243, 182, 13);
+}
+nav ul li:hover a{
+    font-size: 16px;
+    color: rgb(243, 182, 13);
+    font-family: cursive;
+    text-decoration: none;
+}
+
+/*---------------------------*/
+footer{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right: 0;
+    display: grid;
+    grid-template-columns: 22vw 22vw 22vw 24vw;
+    background-color:  rgba(44, 43, 43, 0.712);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding-top: 30px;
+    padding-inline: 5vw;
+}
+.compagnie, .aide, .community, .paper{
+    margin-bottom: 5vh;
+    list-style: none;
+}
+footer h2{
+    font-family: cursive;
+    color: rgb(44, 44, 44);
+    position: relative;
+}
+footer h2::after{    
+    content:'';
+    height: 3px;
+    width:30%;
+    background:rgb(243, 182, 13);
+    position: absolute;
+    left: 2vw;
+    bottom: -0.5vh;
+}
+.compagnie a, .aide a, .community a{
+    display: block;
+    padding-left: 0;
+    margin-top: 2vh;
+    text-decoration: none;
+    list-style: none;
+    color:#fff;
+    font-family: cursive;
+    font-size: medium;
+}
+footer .paper .lien{
+    position: relative;
+    display:grid;
+    margin-top: 3vh;
+}
+
+footer .paper .lien a{
+    max-width: 3vw;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+footer .paper .lien a:hover{
+    max-width: 10vw;
+    background-color:rgb(243, 182, 13);
+    border-radius: 5vw;
+}
+footer .paper .lien a img{
+    max-width: 2vw;
+    border: 1px solid linear-gradient(rgb(243, 182, 13), #fff);
+    transition: 0.8s;
+}
+footer .paper .lien a:hover img{
+    transform: translateX(7.5vw);
+}

@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.45)),url('../decoration/images/back.jpg');
+    background-size: cover;
+}
+.navbar{
+    width:85%;
+    margin:auto;
+    padding:35px 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.logo{
+    font-family: 'Forte';
+    letter-spacing: 2px;
+    width: fit-content;
+    font-size: 45px;
+    z-index: 10000;
+    color:rgb(243, 182, 13);
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style:none;
+    display:inline-block;
+    margin: 0 1vw;
+    padding: 0.5vh 0;
+    position: relative;
+}
+.navbar ul li::after{
+    content:'';
+    height: 3px;
+    width:0;
+    background:#fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width:100%;
+}
+.navbar ul li a{
+    text-decoration:none;
+    color: #fff;
+    font-family: cursive;
+    font-size: 1.5em;
+    font-weight: 300;
+    font-style: italic;
+}
+.content{
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    margin-right: 10vw;
+    color: #fff;
+}
+.content h1{
+    width: auto;
+    margin-left: 10vw;
+    font-family: cursive;
+    font-size:3rem;
+    Color: rgb(243, 182, 13);
+}
+.content p{
+    font-family: cursive;
+    word-wrap: break-word;
+    margin-left: 10vw;
+    font-size: 1.2rem;
+    font-weight:300;
+}
+.content .intro{
+    margin-left: 10vw;
+    margin-top: 5vh;
+    display: inline-flex;
+}
+.content .intro .falc{
+    position: relative;
+    width: 12vw;
+    padding: 1vh 0;
+    margin-right: 3vw;
+    border-radius: 1.5vw;
+    border: 3px solid rgba(175, 7, 7, 0.5);
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    background:transparent;
+    transition: .5s;
+}
+.content .intro .falc a{ 
+    text-decoration: none;
+    color:#fff;
+    font-family: cursive;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.content .intro .falc span{
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition:.5s;
+    background: rgba(175, 7, 7, 0.5);
+}
+.content .intro .falc:hover span{
+    width: 100%;
+}

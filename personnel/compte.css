@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    background:rgba(180, 180, 179, 0.062)
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-family: cursive;
+}
+li{
+    list-style: none;
+}
+h1,h2{
+    color: rgb(243, 182, 13);
+    font-family: 'Forte';
+    font-weight: 600;
+    font-size: 3rem;
+}
+.side-menu{
+    position: fixed;
+    background: rgba(44, 43, 43, 0.712);
+    width: 20vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction:column;
+}
+.side-menu .sidebar{
+    margin-block: 10vh;
+    height:10vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.side-menu li a{
+    font-size: 1.5rem;
+    font-family: cursive;
+    padding: 2vh 5vw;
+    color:#fff;
+    display: flex;
+    align-items:center;
+    text-align: center;
+}
+.side-menu li:hover{
+    margin-left: 1vw;
+    padding: 2vh 0;
+    background-color:rgb(243, 182, 13);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.side-menu li:hover a{
+    align-items: start;
+    text-align: start;
+    justify-content: start;
+}
+.side-menu li a img{
+    max-width: 2vw;
+}
+.container header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    height:10vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(82, 81, 79, 0.712);
+}
+.container header nav{
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+.container header nav .search{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+.dashboard{
+    display: flex;
+}
+.dashboard img{
+    max-width:2vw;
+    margin-right: 1vw;
+    cursor: pointer;
+}
+.dashboard h3{
+    font-family: cursive;
+    color: black;
+}
+.container header nav .search input[type="text"]{
+    border: none;
+    background: #f1f1f1;
+    padding: 10px;
+    width: 50%;
+    font-family: cursive;
+}
+.container header nav .search button{
+    width:40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container header nav .search button img{
+    width: 30px;
+    cursor: pointer;
+}
+.container header nav .notif{
+    width: 30px;
+    margin-right: 5vw;
+    cursor:pointer;
+    background:#fff;
+    border:none;
+}
+.container header nav .notif img{
+    width: 25px;
+}
+.container header nav .profil{
+    width: 40px;
+    background:#fff;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.container header nav .profil img{
+    width:100%;
+    border-radius: 50%;
+}
+/* ((((((((((((((((((((())))))))))))))))))))) */
+.contain{
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+}
+.contain .column1 {
+    width:80vw;
+    height:20vh;
+    position: relative;
+    padding: 2vh 5vw;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.contain .t_rouge,
+.contain .t_jaune,
+.contain .solde{
+    position:relative;
+    height: 16vh;
+    width: 20vw;
+    display: grid;
+    grid-template-columns: 10vw 10vw;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(235, 233, 233, 0.712);
+    background:rgb(255, 255, 255);
+}
+.image img{
+    position:relative;
+    max-width: 7.5vw;
+    align-items:center;
+    align-content: center;
+}
+.contain .solde .image img{
+    max-width: 5vw;
+    margin-top: 2.5vh;
+    margin-left:1vw;
+}
+.contain .num{
+    position: relative;
+    max-width: 12.5vw;
+}
+h3{
+    font-family: cursive;
+    margin-bottom: 1vh;
+    cursor: default;
+}
+h4{
+    color: rgb(243, 182, 13);
+    justify-content:center;
+    font-family: cursive;
+    cursor: default;
+}
+.column2{
+    width:75vw;
+    margin-inline: 2.5vw;
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.column2 .class1{
+    width:47.5vw;
+    height:max-content;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(235, 233, 233, 0.712);
+    background:rgb(255, 255, 255);
+}
+.column2 .class1 h4{
+    width: fit-content;
+    margin-left: 3vw;
+}
+.column2 .class2{
+    width:25vw;
+    height: max-content;
+    margin-left: 2.5vw;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(235, 233, 233, 0.712);
+    background:rgb(255, 255, 255);
+}
